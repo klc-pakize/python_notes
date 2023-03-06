@@ -84,4 +84,4 @@ print(type(resault6))  # <class 'str'>
 #? float to str
 resault7 = str(weight)
 print(resault7)  # 48.77
-print(type(resault7))  # <class 'float'>
+print(type(resault7))  # <class 'str'>
