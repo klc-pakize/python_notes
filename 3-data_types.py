@@ -85,3 +85,29 @@ print(type(resault6))  # <class 'str'>
 resault7 = str(weight)
 print(resault7)  # 48.77
 print(type(resault7))  # <class 'str'>
+
+
+#! EXAMPLES:
+#? 1- Daire Alanı: πr²
+#?   Daire Çevresi: 2πr
+#?   Yarıçapı verilen dairenin alanını ve çevresini hesaplayın:
+# 1- Circle Area: πr²
+#    Circle Circumference: 2πr
+#    Calculate the area and perimeter of the circle given the radius:
+
+radius = float(input('radius:'))
+pi = 3.14
+area = pi * (radius ** 2)
+circumference = 2 * pi * radius
+print("Circle Area:", area)
+print("Circle Circumference:", circumference)
+
+
+#? 2- mil = km / 1,609344
+#?   Aracın kat ettiği mesafeyi kilometre cinsinden, mil cinsinden yazdırın:
+#  2- mil = km / 1.609344
+#     Print the distance traveled by the vehicle in kilometers, in miles:
+
+km = float(input("km:"))
+mil = km / 1.609344
+print("mil:", mil)
