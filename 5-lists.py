@@ -28,20 +28,29 @@ print(names[2])  # Deli
 
 #************************************************************************************
 
-#! LIST: 
+#! LIST: Birden çok veriyi gruplama ve bir arada tutma
+#? - [] ile gösterilir
 #  - Sıralanabilir
 #? - Elemanlar tekrarlanabilir ["a","b","a","a"]
 #  - Elemanlar değiştirilebilir
 #? - Farklı veri tipleri aynı list içinde olabilir 
 #  - list içinde list tanımlanabilir (nested list)
 
+#? Oluşturmak
+# 1- [] ==> name = "AYŞE" ==> list_1 = [name] ==> ["AYŞE"]
+# 2- list() ==> name = "AYŞE" ==> list_2 = list(name) ==> ["A", "Y", "Ş", "E"]
 
-#! LIST:
+#! LIST: Grouping and keeping multiple data together
+#? - Denoted by []
 #  - Sortable
 #? - Elements are repeatable: ["a","b","a","a"]
 #  - Elements can be changed
 #? - Different data types can be in the same list: [str, int, bool, float]
 #  - list can be defined in list (nested list)
+
+#? To create
+# 1- [] ==> name = "AYŞE" ==> list_1 = [name] ==> ["AYŞE"]
+# 2- list() ==> name = "AYŞE" ==> list_2 = list(name) ==> ["A", "Y", "Ş", "E"]
 
 names = ["Ali", "Veli", "Deli"]
 notes = [70, 80, 90]
