@@ -33,7 +33,7 @@ print(names[2])  # Deli
 #  - Sıralanabilir
 #? - Elemanlar tekrarlanabilir ["a","b","a","a"]
 #  - Elemanlar değiştirilebilir
-#? - Farklı veri tipleri aynı list içinde olabilir 
+#? - Farklı veri tipleri aynı list içinde olabilir: [str, int, bool, float, tuple, set, dictionary]
 #  - list içinde list tanımlanabilir (nested list)
 
 #? Oluşturmak:
@@ -45,7 +45,7 @@ print(names[2])  # Deli
 #  - Sortable
 #? - Elements are repeatable: ["a","b","a","a"]
 #  - Elements can be changed
-#? - Different data types can be in the same list: [str, int, bool, float]
+#? - Different data types can be in the same list: [str, int, bool, float, tuple, set, dictionary]
 #  - list can be defined in list (nested list)
 
 #? To create:
