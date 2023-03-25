@@ -36,7 +36,7 @@ print(names[2])  # Deli
 #? - Farklı veri tipleri aynı list içinde olabilir 
 #  - list içinde list tanımlanabilir (nested list)
 
-#? Oluşturmak
+#? Oluşturmak:
 # 1- [] ==> name = "AYŞE" ==> list_1 = [name] ==> ["AYŞE"]
 # 2- list() ==> name = "AYŞE" ==> list_2 = list(name) ==> ["A", "Y", "Ş", "E"]
 
@@ -48,10 +48,11 @@ print(names[2])  # Deli
 #? - Different data types can be in the same list: [str, int, bool, float]
 #  - list can be defined in list (nested list)
 
-#? To create
+#? To create:
 # 1- [] ==> name = "AYŞE" ==> list_1 = [name] ==> ["AYŞE"]
 # 2- list() ==> name = "AYŞE" ==> list_2 = list(name) ==> ["A", "Y", "Ş", "E"]
 
+#? Elemana Erişme (Indexing):
 names = ["Ali", "Veli", "Deli"]
 notes = [70, 80, 90]
 
@@ -60,7 +61,7 @@ print(f"{names[1]} student's grade is {notes[1]}")  # Veli student's grade is 80
 print(f"{names[2]} student's grade is {notes[2]}")  # Deli student's grade is 90
 
 
-# nested list:
+#? nested list:
 student = [
     ["Ali",70],
     ["Veli",80],
@@ -72,7 +73,7 @@ print(f"{student[1][0]} student's grade is {student[1][1]}")  # Veli student's g
 print(f"{student[2][0]} student's grade is {student[2][1]}")  # Deli student's grade is 90
 
 
-
+#? Parçalama (Slicing):
 car_brands = ["Opel", "Dacia", "Mazda", "Toyota"]
 
 print(car_brands[0:3])  # ["Opel", "Dacia", "Mazda"]
@@ -80,7 +81,7 @@ print(car_brands[:2])  # ["Opel", "Dacia"]  #? Başlangıç index numarası veri
 print(car_brands[0:])  # ["Opel", "Dacia", "Mazda", "Toyota"]  #? Bitiş index numarası verilmez ise default olarak son index numarası + 1 'dir | If the end index number is not given, the last index number is + 1 by default.
 print(car_brands[::-1])  # ['Toyota', 'Mazda', 'Dacia', 'Opel']
 
-# Elemanlar değiştirilebilir (Elements can be changed)
+#? Değer Güncelleme (Mutable)
 car_brands[0] = "Honda"
 print(car_brands)  # ['Honda', 'Dacia', 'Mazda', 'Toyota']  #? Artık Opel yerine Honda yazıyor | Now it says Honda instead of Opel 
 
