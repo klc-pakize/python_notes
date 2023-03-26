@@ -5,7 +5,7 @@
 
 #? Oluşturmak:
 # 1- {} ==> dict_1 = {"a": 1, "b": 2, "c": 3}  ==> dict_1 = {'a': 1, 'b': 2, 'c': 3}
-# 2- dict() ==> dict_2 = dict(a=1, b=2, c=3)  ==> dict_2 = dict(a=1, b=2, c=3)
+# 2- dict() ==> dict_2 = dict(a=1, b=2, c=3)  ==> dict_2 = {'a': 1, 'b': 2, 'c': 3}
 
 #! DICTIONARY : It is an unlimited collection of items.
 #  It is created as key: value.
@@ -13,7 +13,7 @@
 
 #? To create:# 
 # 1- {} ==> dict_1 = {"a": 1, "b": 2, "c": 3}  ==> dict_1 = {'a': 1, 'b': 2, 'c': 3}
-# 2- dict() ==> dict_2 = dict(a=1, b=2, c=3)  ==> dict_2 = dict(a=1, b=2, c=3)
+# 2- dict() ==> dict_2 = dict(a=1, b=2, c=3)  ==> dict_2 = {'a': 1, 'b': 2, 'c': 3}
 
 
 #? Elemana Erişme (Indexing):

@@ -124,3 +124,4 @@ set_12 = {1, "2", 2, 4,"5", ("a","b")}
 
 set_12_update = set_12.update(["apple", "cat"])
 print(set_12)  # {1, 2, '2', 4, ('a', 'b'), 'apple', 'cat', '5'}
+
