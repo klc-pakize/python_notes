@@ -35,7 +35,7 @@ type(3.0)  # <class 'float'>
 # % : Mod Operation
 #? // : Complete Division
 
-#! Not: Bölme işleminin sonucu her zaman yüzer.
+#! Not: Bölme işleminin sonucu her zaman float.
 #! Not: İşlem önceliği parantez, bölme, çarpma, toplama, çıkarmadır.
 #! Note: The result of division is always float.
 #! Note: Operation priority is parentheses, division, multiplication, addition, subtraction.
