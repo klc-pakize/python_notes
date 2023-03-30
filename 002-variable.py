@@ -3,23 +3,27 @@
 #? Geçici olarak bir veri sakladığımız alana Değişken denilebilir.
 
 #! Değişken Tanımlama kuralları:
-# 1- Türkçe karakter içermemesi tavsiye edilir.
-#? 2- Sayı ile başlanmamalıdır.
-# 3- karakterler arasında boşluk olmamalıdır.
+#  1- Türkçe karakter içermemesi tavsiye edilir.
+#? 2- Sayı ile başlanmamalıdır. Harf veya _ ile başlamalıdır.
+#  3- karakterler arasında boşluk olmamalıdır.
 #? 4- Büyük küçük harf duyarlılığı vardır.
+#  5- Keywordler değişken ismi olarak kullanılamaz. help('keywords') ile bu keywordslere ulaşabilirz
 
 #! Variable Identification:
 #? The field where we temporarily store data can be called a Variable.
 
 #! Variable Declaration rules:
-# 1- It is recommended not to contain Turkish characters.
-#? 2- It should not start with a number.
-# 3- There should be no spaces between characters.
+#  1- It is recommended not to contain Turkish characters.
+#? 2- It should not start with a number. It must start with a letter or _.
+#  3- There should be no spaces between characters.
 #? 4- It is case sensitive.
+#  5- Keywords cannot be used as variable names. We can access these keywords with help('keywords')
 
 number = 1  # ==> ✔️
 
 # 1number = 1 ==> ✖️
+
+# 1 = b ==> ✖️
 
 # İstanbul = 34 ==> ✖️
 
@@ -30,6 +34,8 @@ number = 1  # ==> ✔️
 # number-four = 4 ==> ✖️
 
 number_five = 5  # ==> ✔️
+
+# for = 6  # ==> ✖️
 
 a, b, c = 10, 20, 30
 print(a)  # 10

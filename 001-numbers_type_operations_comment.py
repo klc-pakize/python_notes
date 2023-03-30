@@ -1,11 +1,11 @@
 
 #! İki tip sayı türü vardır.
 #? 1- Integer (int) = Tam sayıları ifade eder.
-# 2- Float (float) = Ondalıklı sayıları ifade eder.
+#  2- Float (float) = Ondalıklı sayıları ifade eder.
 
 #! There are two types of numbers.
 #? 1- Integer (int) = Expresses integers.
-# 2- Float (float) = Expresses decimal numbers.
+#  2- Float (float) = Expresses decimal numbers.
 
 #! Tip Kontrolü:
 # type() içine yazılan her şeyin tipini döndürür.

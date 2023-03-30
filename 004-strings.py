@@ -1,5 +1,15 @@
 
-#! Strings
+#! Strings: 
+#  "" ve '' içine yazılan bütün karakterler string'dir. | All characters written in "" and '' are strings. 
+#? String yazarken hangi tırnak modeli ile başladıysak onunla bitirmeliyiz. Örneğin: | When writing a string, we must end with whichever nail model we started with. For example:
+# string_1 = "I am Pakize' ==> ✖️
+string_2 = "I am Pakize"  # ==> ✔️
+string_2 = 'I am Pakize'  # ==> ✔️
+
+#? String yazarken başladığımız tırnak modelini yazmış olduğumuz text'in içinde kullanamayız. Örneğin: | We should not use the quotation model that we started while writing a string in the text we have written. For example:
+# string_3 = 'I'm Pakize' ==> ✖️
+string_4 = "I'm Pakize"  # ==> ✔️
+string_5 = 'I"m Pakize'  # ==> ✔️
 
 name = 'Pakize'
 last_name = 'KILIÇ'

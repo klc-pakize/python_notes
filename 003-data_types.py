@@ -1,15 +1,17 @@
 
-#! Veri Tipleri:
-# int ---> Tam Sayı
+#! Numerik Veri Tipleri:
+#  int ---> Tam Sayı
 #? float ---> Ondalıklı Sayı
-# str ---> "" veya '' içerisine yazılan bütün karakterler
+#  str ---> "" veya '' içerisine yazılan bütün karakterler
 #? bool ---> True veya False bilgisi
+#  complex ---> a+bj olarak ifade edilen hemen hemen hiç kullanılmaz.
 
-#! Data Types:
-# int ---> Integer
+#! Numeric Data Types:
+#  int ---> Integer
 #? float ---> Decimal Number
-# str ---> All characters typed in "" or ''
+#  str ---> All characters typed in "" or ''
 #? bool ---> True or False info
+#  complex ---> Expressed as a+bj is almost never used.
 
 #! Veri Tiplerine Neden İhtiyaç Duyarız:
 #! Why We Need Data Types:
@@ -18,6 +20,7 @@ x = 10
 y = 20
 sum = x + y
 print(sum)  # 30
+print(type(sum))  # int
 
 #? Bu işlemdeki değişkenin değerlerini kullanıcıdan input ile alalım:
 #? Let's get the values of the variable in this operation with input from the user:
