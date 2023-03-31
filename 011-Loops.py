@@ -52,6 +52,17 @@ for c in "hey":
               # e
               # y
 
+
+#? for else
+a = [1,3,5,6]
+b = [1,5,3,7]
+for i in a:
+    if i % 2 == 0:
+        print(f"Even number found {i}")
+        break
+else:    
+    print("Even number not found")
+
 #? range(): 
 # Belirli bir aralıkta sayılar üretir. Örneğin, 
 # "for i in range(5):" ifadesi, i değişkenine 0 ile 4 arasındaki sayıları atayarak çalışır.
