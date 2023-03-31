@@ -103,7 +103,7 @@ print(conclusion)  # True
 
 #! Mantıksal Operatörü (Logical Operator):
 
-#? And
+#? And: Bir tane False değer varsa False sonuç verir | Returns False if there is one False value
 # True and True = True
 # False and False = False
 # True and False = False
@@ -125,7 +125,7 @@ status_2 = info_password == student_password  # True
 print(status_1 and status_2)  # False
 
 
-#? Or
+#? Or: Bir tane True değeri varsa sonuç True | If there is one True value, the result is True
 # True or True = True
 # False or False = False
 # True or False = True
@@ -147,13 +147,60 @@ status_2 = info_password == student_password  # True
 print(status_1 and status_2)  # True
 
 
-#? Not
+#? Not: True değeri False, False değeri True çevirir. Aynı zamanda False karşılığı 0, True karşığı 1'dir. | True converts False and False to True. Also, False corresponds to 0, True corresponds to 1.
 # not(True) ==> False
 # not(False) ==> True
+# not(1) ==> 0
+# not(0) ==> 1
+
 
 a = 25
 b = not(a == 85)
 print(b)  # True
+
+
+#? True ve False Olarak Değerlendirilen İfadeler | Expressions Evaluating True and False
+# Numerik olarak 0 olan bütün değerler ve None değeri False:
+print(bool(0))  # False
+print(bool(0.0))  # False
+print(bool(0 + 0j))  # False
+print(bool(None))  # False
+
+# Bütün boş collection data tipindeki yapılar ve boş stringler False:
+print(bool([]))  # False
+print(bool(()))  # False
+print(bool({}))  # False
+print(bool(set()))  # False
+print(bool(""))  # False
+
+#? İşlem Önceliği | Process priority
+# 1- Not
+# 2- And
+# 3- Or
+
+q = not False and True
+print(q)  # True
+
+w = True or False and False
+print(w)  # True
+
+
+#? Objeleri Logical Operator ile kullanmak | Using Entities with the Logical Operator
+# and operatoru False değer arar, ilk bulduğu False değeri döndürür ve devamındaki objeleri kontrol etmez. Eğer bulamazsa son objeyi döndürür.
+
+t = 5 and "string" and ["a",1] and [] and True
+print(t)  # []
+
+j = ["a"] and "False" and 1 and "True" and {"true":"True"}
+print(j)  # {'true': 'True'}
+
+# or operatoru True değer arar, ilk bulduğu True değeri döndürür ve devamındaki objeleri kontrol etmez. Eğer bulamazsa son objeyi döndürür.
+
+t = 0 or "" or 1 or []  
+print(t)  # 1
+
+j = [] or False or 0 or {}
+print(j)  # {}
 
 
 #! Kimlik operatörü (Identity operator):
