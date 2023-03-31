@@ -61,6 +61,11 @@ print(msg4)  # 1.5 kg of apple price 22.5
 msg5 = f"{kg} kg of {productName} price {price * kg}"
 print(msg5)  # 1.5 kg of apple price 22.5
 
+msg6 = f'Bana {{3+7}} hesapla dedi'
+print(msg6)  # Bana {3+7} hesapla dedi
+
+msg7 =  F"{kg} kg of {productName} price {price * kg if price * kg > 30 else 'could not be calculated'}"
+print(msg7)  # 1.5 kg of apple price could not be calculated
 
 #! String Method
 
