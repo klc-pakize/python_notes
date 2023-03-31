@@ -59,8 +59,8 @@ print(car_brands)  # {'Opel': 'Grandland', 'Toyota': 'Corolla', 'Honda': ['Civic
 #! Dictionary Metod | Dictionary Method
 
 #? get()
-# Dictionary içinden belirtilen key in value sine ulaşmamızı sağlar.
-# It allows us to access the key in value specified in the Dictionary.
+# Dictionary içinden belirtilen key in value sine ulaşmamızı sağlar. Var olmayan bir key çağırırsak, None döndürür.
+# It allows us to access the key in value specified in the Dictionary. If we call a key that doesn't exist, it returns None.
 dictionary_1 = {
     "name" : "Samsung s20",
     "price" : 8000
