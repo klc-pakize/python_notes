@@ -58,6 +58,33 @@ print(a)  # 10
 print(b)  # 20
 print(c)  # 30
 
+#! Değişken Çıktısı | Output Variables
+#? Python print() işlevi genellikle değişkenleri çıktısını görüntülemek için kullanılır.
+x = "Python is awesome"
+print(x)  # Python is awesome
+
+# İşlevde print(), virgülle ayırarak birden çok değişken çıktısı alırsınız:
+x = "Python"
+y = "is"
+z = "awesome"
+print(x, y, z)  # Python is 100
+
+#? Birden fazla değişkenin çıktısını almak için operatörü de kullanabilirsiniz +:
+x = "Python "
+y = "is "
+z = "awesome"
+print(x + y + z)  # Python is awesome
+
+# İşlevde print(), bir diziyi ve bir sayıyı operatörle birleştirmeye çalıştığınızda + , Python size bir hata verecektir:
+x = 5
+y = "John"
+# print(x + y)
+
+#? İşlevde birden çok değişken çıktısı almanın en iyi yolu, print()bunları farklı veri türlerini bile destekleyen virgüllerle ayırmaktır:
+x = 5
+y = "John"
+print(x, y)
+
 
 """
 Neden Değişken Kullanmalıyız?
