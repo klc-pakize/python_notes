@@ -1,0 +1,28 @@
+Python nedir?
+Python popüler bir programlama dilidir. 
+Guido van Rossum tarafından yaratılmış ve 1991 yılında piyasaya sürülmüştür.
+
+İçin kullanılır:
+web geliştirme (sunucu tarafı),
+yazılım geliştirme,
+matematik,
+sistem komut dosyası.
+
+Python ne yapabilir?
+Python, web uygulamaları oluşturmak için bir sunucuda kullanılabilir.
+Python, iş akışları oluşturmak için yazılımın yanında kullanılabilir.
+Python veritabanı sistemlerine bağlanabilir. Ayrıca dosyaları okuyabilir ve değiştirebilir.
+Python, büyük verileri işlemek ve karmaşık matematik işlemlerini gerçekleştirmek için kullanılabilir.
+Python, hızlı prototipleme veya üretime hazır yazılım geliştirme için kullanılabilir.
+
+Neden Python?
+Python farklı platformlarda çalışır (Windows, Mac, Linux, Raspberry Pi, vb.).
+Python, İngilizce diline benzer basit bir sözdizimine sahiptir.
+Python, geliştiricilerin diğer bazı programlama dillerinden daha az satırla programlar yazmasına izin veren sözdizimine sahiptir.
+Python bir tercüman sistemi üzerinde çalışır, yani kod yazılır yazılmaz çalıştırılabilir. Bu, prototip oluşturmanın çok hızlı olabileceği anlamına gelir.
+Python, prosedürel bir şekilde, nesne yönelimli bir şekilde veya işlevsel bir şekilde ele alınabilir.
+
+Diğer programlama dilleriyle karşılaştırıldığında Python Sözdizimi
+Python okunabilirlik için tasarlanmıştır ve matematiğin etkisiyle İngiliz diliyle bazı benzerlikleri vardır.
+Python, genellikle noktalı virgül veya parantez kullanan diğer programlama dillerinin aksine, bir komutu tamamlamak için yeni satırlar kullanır.
+Python, kapsamı tanımlamak için boşluk kullanarak girintiye güvenir; döngülerin kapsamı, işlevler ve sınıflar gibi. Diğer programlama dilleri genellikle bu amaçla süslü parantezler kullanır.

@@ -59,12 +59,16 @@ type(3.0)  # <class 'float'>
 
 #! Yorum Satırı:
 """
-- Yorum satırı eklemek için '#' satır bu işaret ile başlamalıdır. Satır içi yorumlarda # işaretinden önce 2 boşlup # işaretinden sonra 1 boşluk bırakılmalıdır.
+- Yorum satırı eklemek için '#' satır bu işaret ile başlamalıdır. 
+- Satır sonu yorumlarında # işaretinden önce 2 boşlup # işaretinden sonra 1 boşluk bırakılmalıdır.
 - Çok uzun bir yazıyı yoruma almak isetsek başına ve sonun 3 adet " işareti eklemeliyiz.
 """
 
+print("Hello World!!!")  # print bir fonksiyondur. Eğer ekrana bir değer bastırmak istersek print fonksiyonunu kullanırız.
+
 #! Comment Line:
 """
-- To add a comment line, the '#' line must start with this sign. Inline comments must have 2 spaces before the # sign and 1 space after the # sign.
+- To add a comment line, the '#' line must start with this sign. 
+- End-of-line comments must have 2 spaces before the # sign and 1 space after the # sign.
 - If we want to comment a very long article, we should add 3 "" signs at the beginning and at the end.
 """

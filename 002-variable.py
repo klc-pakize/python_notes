@@ -2,6 +2,20 @@
 #!Değişken Tanımlama:
 #? Geçici olarak bir veri sakladığımız alana Değişken denilebilir.
 
+#  Değişkenlerin belirli bir türle bildirilmesi gerekmez ve hatta ayarlandıktan sonra türü değiştirebilirler.
+x = 4       # x type = int
+print(x)  # 4
+x = "Sally" # x type = str
+print(x)  # "Sally"
+
+#? Bir değişkenin veri tipini belirtmek istiyorsanız, bu Casting ile yapılabilir.
+x = str(3)    # x will be '3'
+print(type(x))  # <class 'str'>
+y = int(3)    # y will be 3
+print(type(y))  # <class 'int'>
+z = float(3)  # z will be 3.0
+print(type(z))  # <class 'float'>
+
 #! Değişken Tanımlama kuralları:
 #  1- Türkçe karakter içermemesi tavsiye edilir.
 #? 2- Sayı ile başlanmamalıdır. Harf veya _ ile başlamalıdır.
@@ -11,6 +25,8 @@
 
 #! Variable Identification:
 #? The field where we temporarily store data can be called a Variable.
+# Variables don't need to be declared with a specific type, and they can even change the type once set.
+#? If you want to specify the data type of a variable, this can be done with casting.
 
 #! Variable Declaration rules:
 #  1- It is recommended not to contain Turkish characters.
