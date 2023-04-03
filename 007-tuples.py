@@ -1,26 +1,31 @@
 
-#! TUPLES 
-#? List gibidir tek farkı immutable'dir, yani değerleri güncellenmez.
-#  Farklı veri tipleri aynı tuple içinde olabilir: (str, int, bool, float, list, set, dictionary)
-#? Parantez koymaya gerek yoktur, birden fazla eleman var ise sadece virgül ile ayırmak yeterlidir: "a",1, 4, 4
-#  Tek elemanlı bir tuple yapılmak isteniyorsa elemanın sonunda mutlaka virgül olmalıdır: (122,)
-#? Elemanlar tekrarlanabilir ("a","b","a","a")
+#! TUPLE: Birden çok öğeyi tek bir değişkende depolamak için kullanılır.
+#? - List gibidir tek farkı immutable'dir, yani değerleri güncellenmez. (Tuple oluşturulduktan sonra öğeleri değiştiremez, ekleyemez veya kaldıramayız.)
+#  - Sıralıdır (elemanların belirli bir sırası olduğu ve bu sıralamanın değişmeyeceği anlamına gelir.)
+#? - Elemanlar tekrarlanabilir ("a","b","a","a")
+#  - Tek elemanlı bir tuple yapılmak isteniyorsa elemanın sonunda mutlaka virgül olmalıdır: (122,)
+#? - Parantez koymaya gerek yoktur, birden fazla eleman var ise sadece virgül ile ayırmak yeterlidir: "a",1, 4, 4
+#  - Farklı veri tipleri aynı tuple içinde olabilir: (str, int, bool, float, list, set, dictionary)
 
 #? Oluşturmak:
 # 1- () ==> name = "AYŞE" ==> tuple_1 = (name,) ==> ('AYŞE',)
 # 2- tuple() ==> name = "AYŞE" ==> tuple_2 = tuple(name) ==> ('A', 'Y', 'Ş', 'E')
 
-#! TUPLES 
-#? It's like a List, except it's immutable, so its values are not updated.
-#  Different data types can be in the same tuple: (str, int, bool, float, list, set, dictionary)
-#? There is no need to put parentheses, if there is more than one element, it is sufficient to separate them with a comma: "a",1, 4, 4
-#  If a single element tuple is desired, there must be a comma at the end of the element: (122,)
-#? Elements are repeatable: ("a","b","a","a")
-
+#! TUPLE: It is used to store multiple items in a single variable.
+#? - It's like a List, except it's immutable, so its values are not updated. (We cannot modify, add, or remove elements after the tuple has been created.)
+#  - Ordered (means that the elements have a specific order and this order will not change.)
+#? - Elements are repeatable: ("a","b","a","a")
+#  - If a single element tuple is desired, there must be a comma at the end of the element: (122,)
+#? - There is no need to put parentheses, if there is more than one element, it is sufficient to separate them with a comma: "a",1, 4, 4
+#  - Different data types can be in the same tuple: (str, int, bool, float, list, set, dictionary)
 
 #? To create:
 # 1- () ==> name = "AYŞE" ==> tuple_1 = (name,) ==> ('AYŞE',)
 # 2- tuple() ==> name = "AYŞE" ==> tuple_2 = tuple(name) ==> ('A', 'Y', 'Ş', 'E')
+
+
+tuple1 = ("abc", 34, True, 40, "male")
+print(type(tuple1))  # <class 'tuple'>
 
 
 #? Elemana Erişme (Indexing):
@@ -29,7 +34,7 @@ notes = 70, 80, 90
 
 print(f"{names[0]} student's grade is {notes[0]}")  # Ali student's grade is 70
 print(f"{names[1]} student's grade is {notes[1]}")  # Veli student's grade is 80  
-print(f"{names[2]} student's grade is {notes[2]}")  # Deli student's grade is 90
+print(f"{names[-1]} student's grade is {notes[-1]}")  # Deli student's grade is 90
 
 #? nested tuple:
 student = (
@@ -50,6 +55,28 @@ print(car_brands[:2])  # ('Opel', 'Dacia')  #? Başlangıç index numarası veri
 print(car_brands[0:])  # ('Opel', 'Dacia', 'Mazda', 'Toyota')  #? Bitiş index numarası verilmez ise default olarak son index numarası + 1 'dir | If the end index number is not given, the last index number is + 1 by default.
 print(car_brands[::-1])  # ('Toyota', 'Mazda', 'Dacia', 'Opel')
 
+
+#? Değer Güncellenmez (ImMutable):
+# Değer Güncellenmez ama geçici bir çözüm var. Tuple'ı bir listeye dönüştürebilir, listeyi değiştirebilir ve listeyi tekrar bir Tuple'a dönüştürebilirsiniz.
+# The value is not updated, but there is a workaround. You can convert the tuple to a list, modify the list, and convert the list back to a tuple.
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+print(x)  # ("apple", "kiwi", "cherry")
+
+#? Değer Eklenmez | Item cannot be added
+# Öğe eklenemiyor, ancak bir geçici çözüm var. Tuple'ı bir listeye dönüştürebilir, listeyi değiştirebilir ve listeyi tekrar bir Tuple'a dönüştürebilirsiniz.
+# Item cannot be added, but there is a workaround. You can convert the tuple to a list, modify the list, and convert the list back to a tuple.
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.append("orange")
+thistuple = tuple(y)
+print(thistuple)  # ('apple', 'banana', 'cherry', 'orange')
+
+
+
+#! Tuple Metod | Tuple Method
 
 #? len()
 # Tuple kaç elemandan oluştuğunu döndürür | Returns how many elements the tuple consists of
