@@ -173,6 +173,20 @@ print(bool({}))  # False
 print(bool(set()))  # False
 print(bool(""))  # False
 
+
+#? isinstance() 
+# Python dilinde bir built-in fonksiyondur ve bir nesnenin belirli bir sınıfın bir örneği olup olmadığını kontrol etmek için kullanılır.
+# iki argüman alır: birinci argüman, kontrol edilecek nesnedir, ikinci argüman ise kontrol edilecek sınıftır. 
+# Fonksiyon, nesnenin belirtilen sınıfın bir örneği olup olmadığını kontrol eder ve sonuç olarak True veya False döndürür.
+
+# It is a built-in function in Python and is used to check if an object is an instance of a particular class.
+# takes two arguments: the first argument is the object to check, the second argument is the class to check. 
+# The function checks if the object is an instance of the specified class and returns True or False as a result.
+
+x = 200
+print(isinstance(x, int))  # True
+
+
 #? İşlem Önceliği | Process priority
 # 1- Not
 # 2- And
