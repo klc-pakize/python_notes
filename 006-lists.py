@@ -15,24 +15,32 @@ print(names[1])  # Veli
 print(names[2])  # Deli
 
 #! Python’da Dizi Türleri:  
-#  1- List
-#? 2- Tuple
-#  3- Set
-#? 4- Dictionary 
+#  1- List, sıralı ve değişken bir koleksiyondur. Yinelenen üyelere izin verir.
+#? 2- Tuple, sıralı ve değişmez bir koleksiyondur. Yinelenen üyelere izin verir.
+#  3- Set, sırasız, değiştirilemez* ve indekslenmemiş bir koleksiyondur. Yinelenen üye yok.
+#? 4- Dictionary, sıralı** ve değişken bir koleksiyondur. Yinelenen üye yok.
+
+# *Set öğeleri değiştirilemez, ancak istediğiniz zaman öğeleri kaldırabilir ve/veya ekleyebilirsiniz.
+# **Python sürüm 3.7'den itibaren sözlükler sıralanmıştır . Python 3.6 ve önceki sürümlerde sözlükler sırasızdır .
+
+
 
 #! Array Types in Python:
-#  1- List
-#? 2- Tuple
-#  3- Set
-#? 4- Dictionary
+#  1- List is a collection which is ordered and changeable. Allows duplicate members.
+#? 2- Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+#  3- Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+#? 4- Dictionary is a collection which is ordered** and changeable. No duplicate members.
+
+# *Set items are unchangeable, but you can remove and/or add items whenever you like.
+# **As of Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered.
 
 #************************************************************************************
 
-#! LIST: Birden çok veriyi gruplama ve bir arada tutma
+#! LIST: Birden çok öğeyi tek bir değişkende depolamak için kullanılır.
 #? - [] ile gösterilir
-#  - Sıralanabilir
-#? - Elemanlar tekrarlanabilir ["a","b","a","a"]
-#  - Elemanlar değiştirilebilir
+#  - Sıralıdır (elemanların belirli bir sırası olduğu ve bu sıralamanın değişmeyeceği anlamına gelir.)
+#? - Elemanlar tekrar edebilir ["a","b","a","a"]
+#  - Elemanlar değiştirilebilir (Liste oluşturulduktan sonra listedeki öğeleri değiştirebilir, ekleyebilir ve kaldırabiliriz.)
 #? - Farklı veri tipleri aynı list içinde olabilir: [str, int, bool, float, tuple, set, dictionary]
 #  - list içinde list tanımlanabilir (nested list)
 
@@ -40,11 +48,11 @@ print(names[2])  # Deli
 # 1- [] ==> name = "AYŞE" ==> list_1 = [name] ==> ["AYŞE"]
 # 2- list() ==> name = "AYŞE" ==> list_2 = list(name) ==> ["A", "Y", "Ş", "E"]
 
-#! LIST: Grouping and keeping multiple data together
+#! LIST: It is used to store multiple items in a single variable.
 #? - Denoted by []
-#  - Sortable
+#  - Ordered (means that the elements have a specific order and this order will not change.)
 #? - Elements are repeatable: ["a","b","a","a"]
-#  - Elements can be changed
+#  - Elements can be changed (After the list is created, we can modify, add and remove items in the list.)
 #? - Different data types can be in the same list: [str, int, bool, float, tuple, set, dictionary]
 #  - list can be defined in list (nested list)
 
@@ -52,13 +60,16 @@ print(names[2])  # Deli
 # 1- [] ==> name = "AYŞE" ==> list_1 = [name] ==> ["AYŞE"]
 # 2- list() ==> name = "AYŞE" ==> list_2 = list(name) ==> ["A", "Y", "Ş", "E"]
 
+list1 = ["abc", 34, True, 40, "male"]
+print(type(list1))  # <class 'list'>
+
 #? Elemana Erişme (Indexing):
 names = ["Ali", "Veli", "Deli"]
 notes = [70, 80, 90]
 
 print(f"{names[0]} student's grade is {notes[0]}")  # Ali student's grade is 70
 print(f"{names[1]} student's grade is {notes[1]}")  # Veli student's grade is 80  
-print(f"{names[2]} student's grade is {notes[2]}")  # Deli student's grade is 90
+print(f"{names[-1]} student's grade is {notes[-1]}")  # Deli student's grade is 90
 
 
 #? nested list:
@@ -141,7 +152,7 @@ print(list_3)  # ["a","b","c","d","e"]
 
 #? remove()
 # Listeden eleman siler, | It deletes an element from the list,
-# aynı değerden birden fazla varsa ilk karşılaştığı değeri siler ve durur, if there is more than one of the same value, it deletes the first value it encounters and stops
+# aynı değerden birden fazla varsa ilk karşılaştığı değeri siler ve durur, | if there is more than one of the same value, it deletes the first value it encounters and stops
 # olmayan değer verildiğinde hata verir. | It gives an error when a non-existent value is given.
 list_4 = [1, 2, "3", False, "12", False]
 list_4_remove= list_4.remove(False)
@@ -151,6 +162,7 @@ print(list_4)  # [1, 2, "3", "12", False]
 #? pop()
 # Listeden index numarasına göre eleman siler, | It deletes element from the list by index number, 
 # sildiği elemanı döndürür ve dönen elemanla işlem yapabiliriz. | It returns the element it deleted and we can manipulate the returned element.
+# Dizini belirtmezseniz, pop()yöntem son öğeyi kaldırır. | If you do not specify the index, the pop() method removes the last item.
 list_5 = ["Iphone", "Samsung", "Oppo", "Huawei"]
 list_5_pop = list_5.pop(1)
 print(list_5_pop)  # Samsung
@@ -217,3 +229,21 @@ print(list_10)  # [0.5, 3, 4, 8, 10, 86]
 list_10_1 = ["ala", "qal", "58", "isa"]
 list_10_1_sort = list_10_1.sort()
 print(list_10_1)  # ['58', 'ala', 'isa', 'qal']
+
+list_10_2 = ["orange", "mango", "kiwi", "pineapple", "banana"]
+list_10_2.sort(reverse = True)
+print(list_10_2)  # ['pineapple', 'orange', 'mango', 'kiwi', 'banana']
+
+
+#? extend()
+# Geçerli listeye başka bir listeden öğeler eklemek için yöntemi kullanın. | Use the method to add items from another list to the current list.
+# yinelenebilir herhangi bir nesneyi (demetler, kümeler, sözlükler vb.) ekleyebilirsiniz. | you can include any iterable object (tuples, sets, dictionaries, etc.).
+list_11 = ["apple", "banana", "cherry"]
+list_12 = ["mango", "pineapple", "papaya"]
+list_11.extend(list_12)
+print(list_11)  # ['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+
+list_13 = ["apple", "banana", "cherry"]
+list_14 = ("kiwi", "orange")
+list_13.extend(list_14)
+print(list_13)  # ['apple', 'banana', 'cherry', 'kiwi', 'orange']
