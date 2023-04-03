@@ -11,6 +11,13 @@ string_2 = 'I am Pakize'  # ==> ✔️
 string_4 = "I'm Pakize"  # ==> ✔️
 string_5 = 'I"m Pakize'  # ==> ✔️
 
+#? Üç tırnak kullanarak bir değişkene çok satırlı bir dize atayabilirsiniz (""" veya ''')  :| You can assign a multiline string to a variable by using three quotes (""" or ''') :
+string_6 = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(string_6)
+
 name = 'Pakize'
 last_name = 'KILIÇ'
 age = '24'
@@ -70,13 +77,13 @@ print(msg7)  # 1.5 kg of apple price could not be calculated
 #! String Method
 
 # upper()
-#? Makes all letters big. | Tüm harfleri büyük yapar.
+#?  Tüm harfleri büyük yapar. | Makes all letters big. 
 note = "Python is easy to learn because it is a high level of language."
 conclusion = note.upper()
 print(conclusion)  # PYTHON IS EASY TO LEARN BECAUSE IT IS A HIGH LEVEL OF LANGUAGE.
 
 # lower()
-#? Makes all letters small. | Tüm harfleri küçük yapar.
+#? Tüm harfleri küçük yapar. | Makes all letters small. 
 note2 = "Python is easy to learn because it is a high level of language."
 conclusion2 = note2.lower()
 print(conclusion2)  # python is easy to learn because it is a high level of language.
@@ -106,13 +113,13 @@ conclusion6 = note6.split()
 print(conclusion6)  # ['Python', 'is', 'easy', 'to', 'learn', 'because', 'it', 'is', 'a', 'high', 'level', 'of', 'language.']
 
 # split()
-#? 
+#? Listenin bir elemanını noktaya kadar, noktadan sonraki diğer eleman olarak böler. |  Divides one element of the list up to the point as the other element after the point 
 note7 = "Python is easy to learn . because it is a high level of language"
 conclusion7 = note7.split(".")
 print(conclusion7)  # ['Python is easy to learn ', ' because it is a high level of language']
 
 # strip()
-#? Divides one element of the list up to the point as the other element after the point | Listenin bir öğesini, noktadan sonraki diğer öğe olarak noktaya böler
+#? Başındaki veya sonundaki boşlukları kaldırır. | Removes any whitespace from the beginning or the end:
 note8 = "  Python is easy to learn because it is a high level of language.   "
 conclusion8 = note8.strip()
 print(conclusion8)  # Python is easy to learn because it is a high level of language.
@@ -136,10 +143,16 @@ conclusion11 = note11.endswith("P")
 print(conclusion11)  # False
 
 # replace("1","2")
-#? It allows us to change the character or word in the sentence. 1 parameter is what is requested to change, parameter 2 is what is wanted to be written new. | Cümle içerisinde karakter veya kelime değişikliği yapmamızı sağlar. 1 parametre değişmesi istenen şey, 2. parametre yeni yazılması istenen şey. 
+#? Cümle içerisinde karakter veya kelime değişikliği yapmamızı sağlar. 1 parametre değişmesi istenen şey, 2. parametre yeni yazılması istenen şey. | It allows us to change the character or word in the sentence. 1 parameter is what is requested to change, parameter 2 is what is wanted to be written new. 
 note12 = "Python is easy to learn because it is a high level of language."
 conclusion12 = note12.replace("Python","JavaScripts")
 print(conclusion12)  # JavaScripts is easy to learn because it is a high level of language.
+
+# len()
+#? Bir dizenin uzunluğunu almak kullanılır | Used to get the length of a string
+note13 = "Python is easy to learn because it is a high level of language."
+conclusion13 = len(note13)
+print(conclusion13)  # 63
 
 # isalpha()
 #? Returns True if it contains only alphabetic characters, or False if it does not. | Yalnızca alfabetik karakterler içeriyorsa True, içermiyorsa False değerini döndürür.
