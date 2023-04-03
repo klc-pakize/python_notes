@@ -53,34 +53,45 @@ number_five = 5  # ==> ✔️
 
 # for = 6  # ==> ✖️
 
+#? Python, bir satırda birden çok değişkene değer atamanıza izin verir: | Python allows you to assign values to multiple variables in one line:
+#! Not: Değişken sayısının değer sayısıyla eşleştiğinden emin olun, aksi takdirde bir hata alırsınız. | Note: Make sure the variable count matches the value count, otherwise you'll get an error.
 a, b, c = 10, 20, 30
 print(a)  # 10
 print(b)  # 20
 print(c)  # 30
 
+#? Aynı değeri tek bir satırda birden çok değişkene atayabilirsiniz : | You can assign the same value to multiple variables in a single line:
+x = y = z = "Orange"
+print(x)  # Orange
+print(y)  # Orange
+print(z)  # Orange
+
+
 #! Değişken Çıktısı | Output Variables
-#? Python print() işlevi genellikle değişkenleri çıktısını görüntülemek için kullanılır.
+#? Python print() işlevi genellikle değişkenleri çıktısını görüntülemek için kullanılır. | The Python print() function is often used to display the output of variables.
 x = "Python is awesome"
 print(x)  # Python is awesome
 
-# İşlevde print(), virgülle ayırarak birden çok değişken çıktısı alırsınız:
+# İşlevde print(), virgülle ayırarak birden çok değişken çıktısı alırsınız: | In the function print() you output multiple variables separated by commas:
 x = "Python"
 y = "is"
 z = "awesome"
 print(x, y, z)  # Python is 100
 
-#? Birden fazla değişkenin çıktısını almak için operatörü de kullanabilirsiniz +:
+#? Birden fazla değişkenin çıktısını almak için operatörü de kullanabilirsiniz +: | You can also use the + operator to output multiple variables:
 x = "Python "
 y = "is "
 z = "awesome"
 print(x + y + z)  # Python is awesome
 
 # İşlevde print(), bir diziyi ve bir sayıyı operatörle birleştirmeye çalıştığınızda + , Python size bir hata verecektir:
+# In the function print() , when you try to concatenate an array and a number with the operator + , Python will give you an error:
 x = 5
 y = "John"
 # print(x + y)
 
-#? İşlevde birden çok değişken çıktısı almanın en iyi yolu, print()bunları farklı veri türlerini bile destekleyen virgüllerle ayırmaktır:
+#? İşlevde birden çok değişken çıktısı almanın en iyi yolu, print() bunları farklı veri türlerini bile destekleyen virgüllerle ayırmaktır:
+#? The best way to output multiple variables in the function print() is to separate them with commas, which even supports different data types:
 x = 5
 y = "John"
 print(x, y)
