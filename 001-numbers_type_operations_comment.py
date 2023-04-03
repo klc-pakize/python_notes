@@ -8,10 +8,10 @@
 #  2- Float (float) = Expresses decimal numbers.
 
 #! Tip Kontrolü:
-# type() içine yazılan her şeyin tipini döndürür.
+# type() işlevini kullanarak herhangi bir nesnenin veri türünü alabilirsiniz 
 
 #! Type Check:
-# Returns the type of everything typed in type() .
+# You can get the data type of any object using the type() function
 
 type(3)  # <class 'int'>
 type(3.0)  # <class 'float'>
