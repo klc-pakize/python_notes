@@ -77,7 +77,7 @@ b = 25
 conclusion = a < b
 print(conclusion)  # False
 
-#? > (büyük veya eşit mi | greater or equal)
+#? >= (büyük veya eşit mi | greater or equal)
 a = 13
 b = 13
 conclusion = a >= b
@@ -89,7 +89,7 @@ conclusion = a >= b
 print(conclusion)  # False
 
 
-#? < (küçük veya eşit mi | less than or equal)
+#? <= (küçük veya eşit mi | less than or equal)
 a = 3.5
 b = 1.5
 conclusion = a <= b
@@ -228,3 +228,15 @@ str1 = "10"
 print(num1 is num2)  # True - num1 ve num2 aynı sayıdır | num1 and num2 are the same number
 print(num1 is str1)  # False - num1 sayıdır ancak str1 stringdir | num1 is number but str1 is string
 print(num1 is not str1)  # True - num1 sayıdır ancak str1 stringdir ve eşit değiller | num1 is number but str1 is string and they are not equal
+
+
+#! Üyelik Operatörleri
+# Nesnede belirtilen değere sahip bir dizi varsa True döndürür
+# Returns True if a sequence with the specified value is present in the object
+
+x = ["apple", "banana"]
+
+print("banana" in x)  # True
+print("pear" in x)  # False
+print("salad" not in x)  # True
+print("banena" not in x)  # False
