@@ -15,7 +15,7 @@
 #  - Unordered 
 #? - Elements cannot repeat, each element is unic
 #  - Elements cannot be changed, but you can remove items and add new items. (Once a set is created, you cannot change its items, but you can remove items and add new items.)
-#? - Different data types can be in the same sets: {str, int, bool, float, tuple, list, dictionary}
+#? - Different data types can be in the same sets: {str, int, bool, float, tuple}
 #  - Better performance than List and Dictionary
 #? - Cannot be indexed
 
