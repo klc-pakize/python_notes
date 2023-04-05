@@ -1,5 +1,5 @@
 
-#! Function:
+#! Function: İşlev, yalnızca çağrıldığında çalışan bir kod bloğudur. | A function is a block of code which only runs when it is called.
 #? def kelimesi ile başlar, fonksiyon ismi yapacağı işlem ile ilgili anahtar kelime niteliği barındırmalıdır.
 #? It starts with the word def, the function name must contain a keyword attribute related to the operation it will perform.
 
@@ -7,40 +7,12 @@ def selamla():                    # ==> Girdiler parantez içine yazılır,  | E
     print('Merhaba.. Hello..')    # girdiler için değer atamak zorunda değiliz. | We don't have to assign values for the inputs.        
                                   # Parantez yinede belirtmek zorundayız. | We still have to specify the parentheses.
 
-#####* yukarıda fonksiyonu tanımladık ama çalıştırırsak devreye girer ve işlem yapar, çalıştırmak için;
-#####* We defined the function above, but if we run it, it will be activated and processed, to run;
+#####* yukarıda fonksiyonu tanımladık ama çalışması için çağırmamız gerekir:
+# Bir işlevi çağırmak için, işlev adını ve ardından parantez kullanın:
+#####* we defined the function above but we need to call it for it to work:
+# To call a function, use the function name followed by parentheses:
 
 selamla()  # Merhaba.. Hello..
-
-
-def take_square(number):    # ==> number burda bir parametredir | number is a parameter here
-    print(number * number)
-
-# take_square() #! Hata veriyor, | It gives an error, 
-              #! Fonksiyonu tanımlarken parametre alacağını belirtmiştik fakat fonksiyonu çağırırken herhangi bir argüman göndermedik.
-              #! While defining the function, we stated that it will take a parameter, although we did not send any arguments when calling the function.
-"""TypeError: take_square() missing 1 required positional argument: 'number'"""
-
-take_square(7)  # 49
-
-
-#! Print ile Return arasındaki fark | Difference between Print and Return
-#? Print, bir değeri konsola yazdırmak için kullanılır ve fonksiyonun geri kalanı için bir etkisi yoktur. Yani, bir değeri print ile yazdırdığınızda, bu değeri başka bir yerde kullanamazsınız.
-#  Return ise, bir fonksiyondan bir değer döndürmek için kullanılır. Fonksiyon sonucunda döndürülen değer, başka bir değişkene atanabilir veya başka bir fonksiyonda kullanılabilir.
-#? Kısacası Fonksiyon ile yapmış olduğum işlemde elde ettiğim sonucu başka yerlerde kullanmak isteyebilirim bu durumda return kullanmam gerekir. print bana sadece sonucu görüntülememe yardımcı olur.
-
-def add_numbers(x, y):
-    print(x + y)
-
-an = add_numbers(5,9)  # 14
-print(an)  # None
-
-
-def get_cube(number):
-    return number ** 3
-
-gc = get_cube(8)
-print(gc)  # 512
 
 
 #! Neden Kullanırız: | Why We Use:
@@ -99,40 +71,70 @@ def average(liste):
                #! Fonksiyon diğer kodlardan izole bir şekilde çalıştığı için oluşacak muhtemel problerin önüne geçer. | Since the function works in isolation from other codes, it avoids possible problems.
 
 
-#! Positional Arguments:
+#? Argüman Ya da Parametre | Parameters or Arguments
+#  Bilgi, fonksiyonlara bağımsız değişken olarak iletilebilir.  | Information can be passed into functions as arguments.
+#* Bağımsız değişkenler, fonksiyon adından sonra parantez içinde belirtilir. | Arguments are specified after the function name, inside the parentheses.
+#  İstediğiniz kadar argüman ekleyebilirsiniz, sadece virgülle ayırın. | You can add as many arguments as you want, just separate them with a comma.
+#* Parametre, fonksiyon tanımında parantez içinde listelenen değişkendir.
+
+def take_square(number):    #** ==> number burda bir parametredir | number is a parameter here
+    print(number * number)
+
+# take_square() #! Hata veriyor, | It gives an error, 
+                #! Fonksiyonu tanımlarken parametre alacağını belirtmiştik fakat fonksiyonu çağırırken herhangi bir argüman göndermedik.
+                #! While defining the function, we stated that it will take a parameter, although we did not send any arguments when calling the function.
+"""TypeError: take_square() missing 1 required positional argument: 'number'"""
+
+take_square(7)  # 49
+
+
+#? Keyfi Argümanlar, *args | Arbitrary Arguments, *args
+#  İşlevinize kaç bağımsız değişkenin(argüman) iletileceğini bilmiyorsanız, parametre adından önce bir * ekleyin.
+#* Bu şekilde, fonksiyon bir dizi bağımsız değişken(argüman) alır ve öğelere buna göre erişebilir:
+
+#  If you don't know how many arguments to pass to your function, add a * before the parameter name.
+#* This way, the function takes a set of arguments and can access the elements accordingly:
+
+#! Argüman sayısı bilinmiyorsa, parametre adından önce bir * ekleyin:
+def my_function(*kids):
+  print("The youngest child is " + kids[2])
+
+my_function("Emil", "Tobias", "Linus")
+
+
+#? Positional Arguments:
 def yourSelf(name, city, age):
     print(f"I'm {name}, living {city}. I am {age} years old ")
 
 yourSelf('Pakize', 'İstanbul', 24)  # I'm Pakize, living İstanbul. I am 24 years old
 yourSelf('İstanbul', 24, 'Pakize')  # I'm İstanbul, living 24. I am Pakize years old
 
-#! Keyword Arguments:
+
+#? Keyword Arguments:
 yourSelf(age=24, city="İstanbul", name="Pakize")  # I'm Pakize, living İstanbul. I am 24 years old
 # yourSelf(name="Pakize", "İstanbul", 20)  #! Hata verir, ilk positional arguments varsa tanımlanır, sonra keyword arguments tanımlanır.
                                            #! It gives an error, first positional arguments are defined, then keyword arguments are defined.
 yourSelf("Pakize", age=20, city="İstanul")  # I'm Pakize, living İstanul. I am 20 years old
 
-#! Default Arguments:
+
+#? Default Arguments:
 def your_self(name, age, city ="İstanbul",  country ="Türkiye"):
     print(f"I'm {name}, living {country+'/'+city}. I am {age} years old ")
 
 your_self("Pakize", "24")  # I'm Pakize, living Türkiye/İstanbul. I am 24 years old
 your_self(name="John", age="58", city="New York" , country="ABD")  # I'm John, living ABD/New York. I am 58 years old
 
-#! *args and **kwargs
-#? *args: değişkenin içindeki elemanları birer birer al | get the elements inside the variable one by one
 
+#? *args and **kwargs
+#* *args: değişkenin içindeki elemanları birer birer al | get the elements inside the variable one by one
 x = [1,2,3]
 print(x)  # [1, 2, 3]
 print(*x)  # 1 2 3
 
-
 def asterix(a):
     print(a)
-
 # asterix(4,5)  #! asterix() takes 1 positional argument but 2 were given
                 #! hata verir, tek parametre verdik fonksiyona 2 adet argüman göndermeye çalıştık.
-
 
 def sum(*args):
     s = 0
@@ -143,13 +145,12 @@ def sum(*args):
 sonuc = sum(1, 2, 3, 4, 5)
 print(sonuc) # 15
 
-#? **kwargs: Girdiler key value şeklinde olmalıdır | Entries must be key values 
 
+#* **kwargs: Girdiler key value şeklinde olmalıdır | Entries must be key values 
 def double_asterix(**kw):
     print(kw)
 
 double_asterix(a="1", b="2")  # {'a': 1, 'b': 2}
-
 
 def mixs(a, b, *c, **d):
     print(a, b)  # 1 iki
@@ -164,6 +165,42 @@ def mixs(a, b, *c, **d):
                         # _9 dokuz
 
 mixs(1, "iki", 4,5,"alti", yedi=7, sekiz= 8, _9="dokuz")
+
+
+#? Rastgele Anahtar Sözcük Argümanları, **kwargs | Arbitrary Keyword Arguments, **kwargs
+# Fonksiyonun kaç tane anahtar sözcük(keyword) argüman aktarılacağını bilmiyorsanız, 
+#* Fonksiyon tanımında parametre adından önce iki yıldız ** işareti ekleyin:
+#  Bu şekilde, fonksiyon bir bağımsız değişkenler sözlüğü alır ve buna göre öğelere erişebilir:
+
+# If you don't know how many keyword arguments the function will pass,
+#* Add two asterisks ** before the parameter name in the function definition:
+# This way, the function takes a dictionary of arguments and can access the elements accordingly:
+
+#! Anahtar kelime bağımsız değişkenlerinin(argüman) sayısı bilinmiyorsa, parametre adından önce bir çift ** ekleyin:
+def my_function(**kid):
+  print("His last name is " + kid["lname"])  # His last name is Refsnes
+
+my_function(fname = "Tobias", lname = "Refsnes")
+
+
+
+#! Print ile Return arasındaki fark | Difference between Print and Return
+#? Print, bir değeri konsola yazdırmak için kullanılır ve fonksiyonun geri kalanı için bir etkisi yoktur. Yani, bir değeri print ile yazdırdığınızda, bu değeri başka bir yerde kullanamazsınız.
+#  Return ise, bir fonksiyondan bir değer döndürmek için kullanılır. Fonksiyon sonucunda döndürülen değer, başka bir değişkene atanabilir veya başka bir fonksiyonda kullanılabilir.
+#? Kısacası Fonksiyon ile yapmış olduğum işlemde elde ettiğim sonucu başka yerlerde kullanmak isteyebilirim bu durumda return kullanmam gerekir. print bana sadece sonucu görüntülememe yardımcı olur.
+
+def add_numbers(x, y):
+    print(x + y)
+
+an = add_numbers(5,9)  # 14
+print(an)  # None
+
+
+def get_cube(number):
+    return number ** 3
+
+gc = get_cube(8)
+print(gc)  # 512
 
 
 #! Değiştirmek | Change:
