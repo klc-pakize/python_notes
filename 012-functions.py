@@ -136,13 +136,13 @@ def asterix(a):
 # asterix(4,5)  #! asterix() takes 1 positional argument but 2 were given
                 #! hata verir, tek parametre verdik fonksiyona 2 adet argüman göndermeye çalıştık.
 
-def sum(*args):
+def my_sum(*args):
     s = 0
     for arg in args:
         s += arg
     return s
 
-sonuc = sum(1, 2, 3, 4, 5)
+sonuc = my_sum(1, 2, 3, 4, 5)
 print(sonuc) # 15
 
 
@@ -190,9 +190,9 @@ my_function(fname = "Tobias", lname = "Refsnes")
 #? Kısacası Fonksiyon ile yapmış olduğum işlemde elde ettiğim sonucu başka yerlerde kullanmak isteyebilirim bu durumda return kullanmam gerekir. print bana sadece sonucu görüntülememe yardımcı olur.
 
 def add_numbers(x, y):
-    print(x + y)
+    print(x + y)  # 14
 
-an = add_numbers(5,9)  # 14
+an = add_numbers(5,9)  
 print(an)  # None
 
 
@@ -216,9 +216,9 @@ change()  # 20
 k = 25
 def change_2():
     k = 30
-    print(k)  
+    print(k)  # 30 
 
-change_2()  # 30
+change_2()  
 print(k)  # 25 : Global değişkene erişebilir. | It can access the global variable.
 
 
@@ -226,9 +226,9 @@ print(k)  # 25 : Global değişkene erişebilir. | It can access the global vari
 def change_3():
     global k
     k = 45
-    print(k) 
+    print(k)  # 45
 
-change_3()  # 45
+change_3()  
 print(k)  # 45
 
 
@@ -271,7 +271,9 @@ liste2 = ['a', 'b', 'c']
 liste3 = [True, False, True]
 
 for x in zip(liste1, liste2, liste3):
-    print(x) # (1, 'a', True), (2, 'b', False), (3, 'c', True)
+    print(x) # (1, 'a', True) 
+             # (2, 'b', False) 
+             # (3, 'c', True)
 
 
 #? sum(): 
@@ -404,6 +406,15 @@ print(tuple) # (1, 2, 3, 4, 5)
 # In Python, anonymous functions can be created using the lambda expression.
 # Such functions are usually used for single-line operations and are defined using a lambda expression.
 
+#* Syntax:
+#!           lambda arguments : expression
+
+
+#* Argümana 10 ekleyin a ve sonucu döndürün:
+x = lambda a : a + 10
+print(x(7))  # 17
+
+#? Lambda fonksiyonu herhangi bir sayıda bağımsız değişken(argüman) alabilir: 
 #* İki sayıyı toplamak için lambda fonksiyonu kullanma:
 addition = lambda x, y: x + y
 print(addition(3, 5)) # Output: 8
