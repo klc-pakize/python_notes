@@ -27,13 +27,41 @@ for pro in products:
 #        while condition:    ====>  #? If condition == True, the body part works. If it is False, the loop stops.
 #           body                  
 
-
 x = int(input("number: "))
 
 while x > 0:
     print("Enter number")
     x = int(input("number: "))
 print("You did not enter a number matching the condition.")
+
+
+#? while else
+# Koşul yanlış olduğunda bir mesaj yazdırın: | Print a message once the condition is false:
+i = 1
+while i < 6:
+  print(i)  # 1
+            # 2
+            # 3
+            # 4
+            # 5
+  i += 1
+else:
+  print("i is no longer less than 6")  # i is no longer less than 6
+
+#! Not: Döngü bir break ifadesiyle durdurulursa, else bloğu yürütülmez.
+#! Note: The else block will NOT be executed if the loop is stopped by a break statement.
+i = 0
+
+while i < 5:
+    i += 1
+    print(i)  # 1
+              # 2
+              # 3
+    if i == 3:
+        print("Break encountered!")  # Break encountered!
+        break
+else:
+    print("All iterations completed without encountering a break statement!")
 
 
 
@@ -54,6 +82,7 @@ for c in "hey":
 
 
 #? for else
+#  Koşul yanlış olduğunda bir mesaj yazdırın: | Print a message once the condition is false:
 a = [1,3,5,6]
 b = [1,5,3,7]
 for i in a:
@@ -63,10 +92,24 @@ for i in a:
 else:    
     print("Even number not found")
 
+#! Not: Döngü bir break ifadesiyle durdurulursa, else bloğu yürütülmez.
+#! Note: The else block will NOT be executed if the loop is stopped by a break statement.
+my_list = [1, 2, 3, 4, 5]
+
+for num in my_list:
+    if num == 3:
+        print("Break encountered!")  # Break encountered!
+        break
+    print(num)  # 1
+                # 2
+else:
+    print("All items processed successfully!")
+
+
 #? range(): 
-# Belirli bir aralıkta sayılar üretir. Örneğin, 
+# Belirli bir aralıkta sayılar üretir. Varsayılan olarak 0'dan başlayan ve (varsayılan olarak) 1 artan bir sayı dizisi döndürür. Örneğin, 
 # "for i in range(5):" ifadesi, i değişkenine 0 ile 4 arasındaki sayıları atayarak çalışır.
-# Generates numbers in a specified range. For example, the statement 
+# Generates numbers in a specified range. returns an array of numbers starting at 0 by default and increasing by (by default) 1. For example, the statement 
 # "for i in range(5):" works by assigning the numbers 0 to 4 to the variable i.
 
 for a in range(3,15):  # 3 = start, 15 = stop, 1 = default step 
