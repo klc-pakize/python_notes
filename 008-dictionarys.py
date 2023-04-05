@@ -1,22 +1,48 @@
 
-#! DICTIONARY : Sınırsız item(öğe) topluluğudur.
-#  key: value olarak oluşturulur.
-#? key'ler yalnızca tuple gibi immutable(değişmez) değerleri alabilir, value'ler her şeyi alabilir.
+#! DICTIONARY : Sözlükler, veri değerlerini key:value çiftlerinde depolamak için kullanılır.
+#  - Sıralıdır (elemanların belirli bir sırası olduğu ve bu sıralamanın değişmeyeceği anlamına gelir.)
+#? - Elemanlar tekrar edemez, her eleman unic
+#  - Elemanlar değiştirilebilir (Dictionary oluşturulduktan sonra öğeleri değiştirebilir, ekleyebilir veya kaldırabiliriz.)
+#? - keyler değiştirilemez (immutable) veri tiplerinden oluşan nesneler olmalıdır. 
+#?   Bu nedenle, tuple'lar, sayılar (int, float), booleans (True, False), ve string'ler (str) gibi değiştirilemez veri tipleri sözlük key'i olarak kullanılabilirler. 
+#?   Value her veri tipini kullanabilirler.
 
 #? Oluşturmak:
 # 1- {} ==> dict_1 = {"a": 1, "b": 2, "c": 3}  ==> dict_1 = {'a': 1, 'b': 2, 'c': 3}
 # 2- dict() ==> dict_2 = dict(a=1, b=2, c=3)  ==> dict_2 = {'a': 1, 'b': 2, 'c': 3}
 
-#! DICTIONARY : It is an unlimited collection of items.
-#  It is created as key: value.
-#? Keys can only take immutable values such as tuples, values can take anything.
+#! DICTIONARY : Dictionaries are used to store data values in key:value pairs.
+# - Sorted (means that the elements have a specific order and this order will not change.)
+#? - Elements cannot repeat, each element is unic
+#  - Elements can be modified (We can change, add or remove elements after the Dictionary is created.)
+#? - keys must be objects of immutable data types.
+#?   Therefore, immutable data types such as tuples, numbers (int, float), booleans (True, False), and strings (str) can be used as dictionary keys.
+#?   Value can use any data type.
 
 #? To create:# 
 # 1- {} ==> dict_1 = {"a": 1, "b": 2, "c": 3}  ==> dict_1 = {'a': 1, 'b': 2, 'c': 3}
 # 2- dict() ==> dict_2 = dict(a=1, b=2, c=3)  ==> dict_2 = {'a': 1, 'b': 2, 'c': 3}
 
 
+
+dict1 = {'name': 'John', 'age': 36, 'country': 'Norway'}
+print(type(dict1))  # <class 'dict'>
+
+
+#? Kopyalara İzin Verilmez | Duplicates Not Allowed
+# Dictionary aynı key'e sahip iki öğe bulunamaz
+dict2 = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964,
+  "year": 2020
+}
+print(dict2)  # {'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
+
+
 #? Elemana Erişme (Indexing):
+# Bir dictionary öğelerine, köşeli parantez içindeki anahtar(key) adına bakarak erişebilirsiniz: 
+# You can access the items of a dictionary by referring to its key name, inside square brackets:
 city_number_plate = {
     "İstanbul" : 34,
     "İzmir" : 35,
@@ -56,10 +82,11 @@ print(car_brands)  # {'Opel': 'Grandland', 'Toyota': 'Corolla', 'Honda': 'Civic'
 car_brands["Honda"] = ["Civic", "City"]
 print(car_brands)  # {'Opel': 'Grandland', 'Toyota': 'Corolla', 'Honda': ['Civic', 'City'], 'Citroen': 'c4x'} 
 
+
 #! Dictionary Metod | Dictionary Method
 
 #? get()
-# Dictionary içinden belirtilen key in value sine ulaşmamızı sağlar. Var olmayan bir key çağırırsak, None döndürür.
+# Dictionary içinden belirtilen key'in value sine ulaşmamızı sağlar. Var olmayan bir key çağırırsak, None döndürür.
 # It allows us to access the key in value specified in the Dictionary. If we call a key that doesn't exist, it returns None.
 dictionary_1 = {
     "name" : "Samsung s20",
@@ -95,7 +122,7 @@ print(dictionary_3_values)  # dict_values(['Mor Salkımlı Ev', 'Halide Edip Ad�
 
 
 #? items()
-# Dictionary deki tüm key-value çiftlerini döndürür. Bu yöntem, döngülerde dictionary öğeleri üzerinde gezinmek için kullanışlıdır. 
+# Dictionary deki tüm key-value çiftlerini liste içinde tuplelar olarak döndürür. Bu yöntem, döngülerde dictionary öğeleri üzerinde gezinmek için kullanışlıdır. 
 # Returns all key-value pairs in Dictionary. This method is useful for navigating dictionaries in loops.
 dictionary_4 = {
     "book" : "Mor Salkımlı Ev",
@@ -127,8 +154,8 @@ dictionary_5["purpose"] = "create web pages"
 print(dictionary_5)  # {'language': 'JavaScripts', 'year': 1995, 'author': 'Brandan Eich', 'purpose': 'create web pages'}
 
 #? pop()
-# Key/Value silmek için kullanılır
-# Used to delete Key/Value
+# Key/Value silmek için kullanılır, popitem() son eklenen öğeyi kaldırır
+# Used to delete Key/Value, popitem() removes the last added item
 dictionary_6 = {
     "artist" : "Leonardo Da Vinci",
     "work": "Mona Lisa",
@@ -163,6 +190,8 @@ dictionary_8 = {
     "year" : 1990,
 }
 
+del dictionary_8["year"]
+print(dictionary_8)  # {'artist': 'Leonardo Da Vinci', 'work': 'Mona Lisa', 'language': 'Python'}
 del dictionary_8
 # print(dictionary_8)  #! NameError: name 'dictionary_8' is not defined.
 
@@ -211,3 +240,15 @@ print(dictionary_9_copy)  # {'artist': 'Leonardo Da Vinci', 'language': 'Python'
 dictionary_9_copy.pop("language")
 print(dictionary_9_copy)  # {'artist': 'Leonardo Da Vinci'}
 print(dictionary_9)  # {'artist': 'Leonardo Da Vinci', 'language': 'Python'}
+
+
+#? len()
+# Dictionary kaç elemandan oluştuğunu döndürür | Returns how many elements the dictionary consists of
+dictionary_10 = {
+  "brand": "Ford",
+  "electric": False,
+  "year": 1964,
+  "colors": ["red", "white", "blue"]
+}
+
+print(len(dictionary_10))  # 4
